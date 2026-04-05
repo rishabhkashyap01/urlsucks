@@ -1,13 +1,19 @@
 import express from "express";
 import http from "http";
+import helmet from "helmet";
+import cors from "cors";
 
 
 const app = express();
 
 const PORT = 3000;
 
+app.use(helmet());
+app.use(cors());
+app.use(express.json({limit: '20kb'}));
+
 app.use('/api/status' , (req, res) => { 
-    res.send('app is working'); 
+    res.json({message: 'app is working'}); 
 
 });
 
