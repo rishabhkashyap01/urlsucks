@@ -11,4 +11,3 @@ export const connectdb = async () => {
     }
 }
 
-console.log("")
