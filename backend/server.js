@@ -16,7 +16,8 @@ app.use(express.json({limit: '20kb'}));
 app.use('/api/status' , (req, res) => { 
     res.json({message: 'app is working'}); 
 
-});
+});z
+app.use('/api/url', urlRouter);
 
 const server = http.createServer(app);
 
