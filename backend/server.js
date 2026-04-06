@@ -4,6 +4,7 @@ import http from "http";
 import helmet from "helmet";
 import cors from "cors";
 import { connectdb } from "./db/db.js";
+import urlRouter from './routes/urlRoutes.js';
 
 const app = express();
 
@@ -16,8 +17,8 @@ app.use(express.json({limit: '20kb'}));
 app.use('/api/status' , (req, res) => { 
     res.json({message: 'app is working'}); 
 
-});z
-app.use('/api/url', urlRouter);
+});
+app.use('/api', urlRouter);
 
 const server = http.createServer(app);
 
