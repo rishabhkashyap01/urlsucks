@@ -5,6 +5,7 @@ import helmet from "helmet";
 import cors from "cors";
 import { connectdb } from "./db/db.js";
 import urlRouter from './routes/urlRoutes.js';
+import { handleRedirect } from './controllers/urlController.js';
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use('/api/status' , (req, res) => {
 
 });
 app.use('/api', urlRouter);
+app.get('/:short_code', handleRedirect);
 
 const server = http.createServer(app);
 
