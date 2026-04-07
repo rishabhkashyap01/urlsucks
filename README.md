@@ -10,7 +10,7 @@ it's made using react  frontend and express backend .
 
 i connected the backend to mongo, but you can just save it locally on json.
 
-I made this in a day cause i was bored, the backend was pretty simple, i took more time in frontend (yeah i am like that) :)
+I made this cause i was bored, the backend was pretty simple, i took more time in frontend (yeah i am like that) :)
  
 
 
